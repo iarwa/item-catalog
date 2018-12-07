@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>{{ item.category.name }}
+				<figure class="creator">
+					<img src="{{ url_for('static', filename='blank_user.gif') }}">
+					<figcaption>{{ creator.name }}</figcaption>
+				</figure>
+			</h1>
+
+		</div>
+	</div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+            <div class="menu-item">
+              <h3>{{item.title}}</h3>
+              <p>{{item.description}}</p>
+							<a href='{{url_for('editItem', category_id = item.cat_id, item_id=item.id ) }}'>Edit</a> |
+							<a href='{{url_for('deleteItem', category_id = item.cat_id, item_id=item.id ) }}'>Delete</a>
+
+						</div>
+    </div>
+
+    <div class="col-md-1"></div>
+  </div>
+  {% endblock %}
