@@ -52,6 +52,18 @@ To get the Google login working there are a few additional steps:
 13. Place JSON file in item-catalog directory that you cloned from here
 14. Run application using `python /item-catalog/app.py`
 
+# JSON Endpoints
+
+The following are open to the public:
+
+Catalog JSON: /catalog/JSON - Displays the whole catalog. Categories and all items.
+
+Category Items JSON: /catalog/<int:category_id>/items/JSON - Displays items for a specific category.
+
+Item JSON: /catalog/<int:category_id>/items/<int:item_id>/JSON - Displays a specific category item.
+
+
+
 ## Authors
 
 * **Arwa Alshathri** - *Initial work* - [iarwa](https://github.com/iarwa)
